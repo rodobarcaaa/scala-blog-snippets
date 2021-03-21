@@ -4,8 +4,7 @@ object Post1Intro {
 
   object HelloWorld {
 
-    /**
-      * Como insertamos un comentario en un inicio de un método y que se incluye en el ScalaDoc
+    /** Como insertamos un comentario en un inicio de un método y que se incluye en el ScalaDoc
       *
       * @param args describimos la entrada de argumentos o otro input value
       */
