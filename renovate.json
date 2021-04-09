@@ -1,8 +1,9 @@
 {
   "extends": ["config:base", "group:all"],
-  "automerge": true,
-  "major": {
-    "automerge": false
+  "sbt": {
+    "enabled": false
   },
-  "reviewers": ["notrab"]
+  "automerge": true,
+  "assigneesFromCodeOwners": true,
+  "assigneesSampleSize": 1
 }
