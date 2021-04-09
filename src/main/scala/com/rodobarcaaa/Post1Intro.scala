@@ -1,4 +1,4 @@
-package com.rechemendia
+package com.rodobarcaaa
 
 object Post1Intro {
 
@@ -96,7 +96,7 @@ object Post1Intro {
     // Otra conocida acá como callByName donde pasamos otra función
     def product(x: => Int, y: => Int) = x * y
     // Como la invocamos
-    def two() = 2
+    def two()                         = 2
     product(two(), 6) // 12
 
     // U otro un poco más avanzado donde pasamos una función a ejecutar
@@ -104,11 +104,11 @@ object Post1Intro {
     def productF(f: Int => Int, x: Int, y: Int = 2) = f(x * y)
     // Como la invocamos
     // Definimos una función val
-    val sum5: Int => Int = x => x + 5 // ó simplemente _ + 5
+    val sum5: Int => Int                            = x => x + 5 // ó simplemente _ + 5
     // Pasamos la misma por parametros
     productF(sum5, 6, 6) // (6 * 6) + 5 = 41
     // Invocamos sin el ultimo valor para que tome 2 po default
-    productF(sum5, 5) // (5 * 2) + 5 = 15
+    productF(sum5, 5)    // (5 * 2) + 5 = 15
 
     // Podemos pasar como en otros lenguajes un array de parámetros
     def sumAll(x: Int, y: Int, others: Int*) = {
@@ -136,7 +136,7 @@ object Post1Intro {
     //O que el segundo parámetro se inplicito de un contexto particular
     def productCurrying(x: Int)(implicit y: Int): Int = x * y
     // Definimos el implicito
-    implicit val number3: Int = 3
+    implicit val number3: Int                         = 3
     // Ahora consumimos con un solo parámetro y el otro lo encontrará y usará number3
     productCurrying(5) // 15
   }

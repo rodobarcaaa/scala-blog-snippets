@@ -1,4 +1,4 @@
-package com.rechemendia
+package com.rodobarcaaa
 
 object Post2CaseClass {
 
@@ -39,7 +39,8 @@ object Post2CaseClass {
 
   val motorcycle = new Vehicle1(2, 100)
   motorcycle.passengers       // 2
-  motorcycle.speed            // no compila -> error: reassignment to val
+  // no compila -> error: reassignment to val
+  // motorcycle.speed
   motorcycle.speedDescription // 100 km
   println(motorcycle)         // (passengers: 2, speed: 100 km)
 
@@ -78,11 +79,11 @@ object Post2CaseClass {
 
   // Usando el unapply en expresiones match
   def recognizeVehicle(x: Vehicle2): String = x match {
-    case Vehicle2(10, speed, unit) =>
+    case Vehicle2(10, speed, unit)            =>
       s"Minivan de 10 pasajeros con velocidad de $speed $unit"
     case Vehicle2(2, speed, _) if speed > 300 =>
       s"Auto deportivo de alta velocidad ${x.speedDescription}"
-    case _ =>
+    case _                                    =>
       "Cualquier auto no minivan, ni deportivo:" + x
   }
 
