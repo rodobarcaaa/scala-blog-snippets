@@ -41,7 +41,7 @@ jobs:
       - name: merge PR
         uses: desbo/merge-pr-action@v0
         with:
-          GITHUB_TOKEN: ${{ secrets.SYSADMIN_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALLOWED_UPDATE: minor
           MERGE_METHOD: squash
 
